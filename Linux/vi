@@ -69,8 +69,6 @@ n       뒤로 검색
 N       앞으로 검색
 
 
-3. 마지막 행 모드
-
     :%s/old/new      각 행의 첫 old를 new로 바꾸기
     :%s/old/new/g    모든 old를 new로 바꾸기
     :%s/old/new/gc   모든 old를 new로 바꾸기 전에 물어보기
