@@ -58,23 +58,38 @@ vi 편집기
     w   다음 단어의 첫 글자로 이동
     b   이전 단어의 첫 글자로 이동
     G   파일 끝으로 이동
-    :n  n행으로 이동
 
-r   한 문자 변경
-cc  커서가 있는 줄의 내용 변경
-
-/문자열   앞에서부터 문자열 찾기
-?문자열   뒤에서부터 문자열 찾기
-n       뒤로 검색
-N       앞으로 검색
+    r   한 문자 변경
+    cc  커서가 있는 줄의 내용 변경
+    n       뒤로 검색
+    N       앞으로 검색
 
 
-    :%s/old/new      각 행의 첫 old를 new로 바꾸기
-    :%s/old/new/g    모든 old를 new로 바꾸기
-    :%s/old/new/gc   모든 old를 new로 바꾸기 전에 물어보기
+2. 마지막 행 모드
+- 콜론(:)으로 진입
 
-    :set number     행번호 출력 
-    :set nu
-    :set nonumber   행번호 숨기기
-    :set nonu
-    :cd             현재 디렉토리 출력
+    w               저장
+    w 파일명          파일명으로 저장
+    q               종료
+    q!              강제 종료
+    wq              저장 후 종료
+    wq!             저장 후 강제 종료
+    f 파일명          파일명 변경
+
+    n               n행으로 이동
+    $               파일의 맨 끝 줄로 이동
+    e!              마지막 저장 이후 모든 편집 취소
+
+    /문자열           커서 앞 문자열 찾기
+    ?문자열           커서 뒤 문자열 찾기
+
+    set number      행번호 출력 
+    set nu
+    set nonumber    행번호 숨기기
+    set nonu
+    cd              현재 디렉토리 출력
+
+    %s/old/new      각 행의 첫 old를 new로 바꾸기
+    %s/old/new/g    모든 old를 new로 바꾸기
+    %s/old/new/gc   모든 old를 new로 바꾸기 전에 물어보기
+
