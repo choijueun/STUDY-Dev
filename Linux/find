@@ -1,0 +1,12 @@
+파일명으로 검색
+ls [대상폴더] | grep "[검색 문자열]"
+
+하위 폴다도 검색
+find [대상폴더] -type -f -name "*[검색 문자열]*"
+
+
+파일 내용 검색
+find [대상폴더] -type -f -print |xargs grep "[검색문자열]"
+
+확장자 지정 검색
+find [대상폴더] -type -f -name "*.[파일 확장자]" | xargs grep "[검색 문자열]"
