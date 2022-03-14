@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h5 class="my-3 border-bottom pb-2">질문등록</h5>
+    <form method="POST" class="post-form my-3">
+        {{ form.csrf_token }}
+        {% include "form_errors.html" %}
+<!--
+        {{ form.subject.label }}
+        {{ form.subject() }}
+
+        {{ form.content.label }}
+        {{ form.content() }}
+-->
+        <!-- CSRF TOKEN -->
+        <!-- DB에 등록할 정보 -->
+        <div class="form-group">
+            <label for="subject">제목</label>
+            <input type="text" class="form-control" name="subject" id="subject"
+                   value="{{ form.subject.data or '' }}">
+        </div>
+        <div class="form-group">
+            <label for="content">내용</label>
+            <textarea class="form-control" name="content" id="content" rows="5">
+                {{ form.content.data or '' }}
+            </textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">저장하기</button>
+    </form>
+</div>
+{% endblock %}

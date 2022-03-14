@@ -1,0 +1,257 @@
+서브쿼리 SubQuery
+
+    ┏ SELECT : 스칼라 서브쿼리 Scalar Subquery
+    ┣ FROM : 인라인 뷰 Inline View
+    ┗ WHERE, HAVING : 중첩 서브쿼리 Nested Subquery
+
+    1. 스칼라 서브쿼리
+    - 컬럼이 올 수 있는 대부분 위치에 사용
+    - 컬럼 대신 사용됨
+    - 반드시 하나의 값만을 반환
+
+    2. 인라인 뷰
+    - FROM절 등 테이블명이 올 수 있는 위치에 사용
+
+    3. 중첩 서브쿼리
+    - WHERE절, HAVING절에 사용
+        1) 메인 쿼리와의 관계
+        ┌ 비연관 서브쿼리: 서브쿼리 내에 메인 쿼리의 컬럼 x
+        └ 연관 서브쿼리: 서브쿼리 내에 메인 쿼리의 컬럼 o
+        2) 반환하는 데이터 형태
+        ┌ 단일 행 서브쿼리: 1건 이하의 데이터 반환, 단일 행 비교 연산자와 함께 사용 (=, <, >, <=, >=, <>)
+        ├ 다중 행 서브쿼리: 여러 건의 데이터 반환, 다중 행 비교 연산자와 함께 사용 (IN, ALL, ANY, SOME, EXISTS)
+        └  다중 컬럼 서브쿼리: 여러 컬럼의 데이터 반환
+
+
+뷰 View
+
+    가상 테이블
+    특정 SELECT문에 이름을 붙여서 재사용 가능하도록 저장한 오브젝트
+
+
+집합 연산자
+
+    1. UNION (ALL)
+    - 두 QUERY 결과의 합집합 (ALL: 중복 포함)
+
+    2. INTERSECT
+    - 두 QUERY 결과의 교집합
+
+    3. MINUS / EXCEPT
+    - 두 QUERY 결과의 차집합
+
+
+그룹 함수
+
+    GROUP BY하여 나타낼 수 있는 데이터를 구하는 함수
+    ┏ 집계 함수: COUNT, SUM, AVG, MAX, MIN
+    ┗ 소계(총계) 함수: ROLLUP, CUBE, GROUPING SETS
+
+    1. ROLLUP
+    - ROLLUP(A): 
+                    A로 그룹핑
+                    총합계
+    - ROLLUP(A, B): 
+                    A, B로 그룹핑
+                    A로 그룹핑 
+                    총합계
+    - ROLLUP(A, B, C): 
+                    A, B, C로 그룹핑
+                    A, B로 그룹핑
+                    A로 그룹핑 
+                    총합계
+    + ROLLUP((A, B), C):
+                    A, B, C로 그룹핑
+                    A, B로 그룹핑
+                    총합계
+    + ROLLUP(A, (B, C)):
+                    A, B, C로 그룹핑
+                    A로 그룹핑
+                    총합계
+    
+    2. CUBE
+    - CUBE(A):
+                    A로 그룹핑
+                    총합계
+    - CUBE(A, B):
+                    A, B로 그룹핑
+                    A로 그룹핑
+                    B로 그룹핑
+                    총합계
+    - CUBE(A, B, C):
+                    A, B, C로 그룹핑
+                    A, B로 그룹핑
+                    A, C로 그룹핑
+                    B, C로 그룹핑
+                    A로 그룹핑
+                    B로 그룹핑
+                    C로 그룹핑
+                    총합계
+
+    3. GROUPING SETS
+    - 특정 항목에 대한 소계
+    - 인자에 ROLLUP이나 CUBE 사용 가능
+    - GROUPING SETS(A, B):
+                    A로 그룹핑
+                    B로 그룹핑
+    - GROUPING SETS(A, B, ( )):
+                    A로 그룹핑
+                    B로 그룹핑
+                    총합계
+    - GROUPING SETS(A, ROLLUP(B)):
+                    A로 그룹핑
+                    B로 그룹핑
+                    총합계
+    - GROUPING SETS(A, ROLLUP(B, C)):
+                    A로 그룹핑
+                    B, C로 그룹핑
+                    B로 그룹핑
+                    총합계
+    - GROUPING SETS(A, B, ROLLUP(C)):
+                    A로 그룹핑
+                    B로 그룹핑
+                    C로 그룹핑
+                    총합계
+
+    4. GROUPING
+    - ROLLUP, CUBE, GROUPING SETS 등과 함께 쓰임
+    - 소계를 나타내는 ROW 구분
+    - 소계 계산 ROW: 1 / 나머지: 0
+    - CASE 문으로 원하는 TEXT 출력 가능 (Oracle: DECODE)
+
+
+윈도우 함수
+
+    - OVER 키워드와 함께 사용
+    ┏ 순위: RANK, DENSE_RANK, ROW_NUMBER
+    ┣ 집계: SUM, MAX, MIN, AVG, COUNT
+    ┣ 행 순서: FIRST_VALUE, LAST_VALUE, LAG, LEAD
+    ┗ 비율: CUME_DIST, PERCENT_RANK, NTILE, RATIO_TO_REPORT
+
+    1. 순위 함수
+        1) RANK
+        : 1, 2, 2, 4, 5, 5, 7 …
+
+        2) DENSE_RANK
+        : 1, 2, 2, 3, 4, 4, 5 …
+
+        3) ROW_NUMBER
+        : 1, 2, 3, 4, 5, 6, 7 …
+
+        ex) 
+            SELECT * FROM (
+                    SELECT      출석 연월,
+                                아이디,
+                                COUNT(*) AS 출석수,
+                                DENSE_RANK() OVER(PARTITION BY 출석 연월, ORDER BY COUNT(*) DESC) AS 순위
+                    FROM        출석이벤트
+                    GROUP BY    출석 연월, 아이디
+            ) WHERE 순위 < 5;
+            ; p223
+
+    2. 집계 함수
+        1) SUM
+        : 데이터 합계. 인자로는 숫자형만.
+          Oracle은 OVER 내에 ORDER BY 사용해 누적값 계산(p229)
+          SUM하는 Column으로 ORDER BY = RANGE 없어도 누적합 집계
+          RANGE 옵션 = 동일한 데이터 모두 합함
+
+            ex)
+            SUM(SCORE) OVER(PARTITION BY STUDENT_NAME) AS TOTAL_SCORE
+            ; GROUPY BY 하는거랑 똑같 나?
+
+        2) MAX
+        : 데이터 최댓값.
+
+        3) MIN
+        : 데이터 최솟값.
+
+        4) AVG
+        : 데이터 평균값.
+
+        5) COUNT
+        : 데이터 건수
+
+    3. 행 순서 함수
+        1) FIRST_VALUE
+        : 파티션 별 가장 선두에 위치한 데이터
+          SQL Server(MSSQL) 미지원
+
+        2) LAST_VALUE
+        : 파티션 별 가장 마지막에 위치한 데이터
+
+        3) LAG
+        : 파티션 별 특정 수만큼 앞선 데이터
+          SQL Server(MSSQL) 미지원
+
+        4) LEAD
+        : 파티션 별 특정 수만큼 뒤에 있는 데이터
+          SQL Server(MSSQL) 미지원
+
+    4. 비율 함수
+        1) CUME_DIST
+        : 해당 파티션의 누적 백분율
+          0 < 결과값 ≤ 1
+          SQL Server(MSSQL) 미지원
+
+        2) PERCENT_RANK
+        : 맨 위 끝 행이 0, 맨 아래 끝 행이 1
+          현재 행이 위치하는 백분위 순위 값
+
+        3) NTILE
+        : 인자값 수만큼 행을 n등분, 현재 행에 해당하는 등급
+          할당할 행이 남으면 맨 앞 그룹부터 하나씩 더 채워진다.
+          대학 성적도 이렇게 주면 좋을 텐데
+
+        4) RATIO_TO_REPORT
+        : 파티션 별 합계에서 차지하는 비율
+          SQL Server(MSSQL) 미지원
+
+
+Top-N 쿼리
+
+    1. ROWNUM
+    - Pseudo Column 
+      동등(=) 사용할 수 없음. < 또는 <=
+      상위 n행 뽑으려면 인라인 뷰 사용(ORDER BY는 WHERE보다 나중에 수행)
+
+    2. 윈도우 함수의 순위 함수
+
+
+셀프 조인 Self Join
+
+    FROM절에 같은 테이블이 두 번 이상 등장하므로 ALIAS 필수
+
+
+계층 쿼리
+
+    계층 구조를 이루는 컬럼
+
+    1) LEVEL
+    : 현재 DEPTH 반환 (루트 노드 1)
+
+    2) SYS_CONNECT_BY_PATH (컬럼, 구분자)
+    : 루트 노드부터 현재 노드까지의 경로 출력
+
+    3) START WITH
+    : 경로가 시작되는 루트 노드 생성
+
+    4) CONNECT BY
+    : 루트로부터 자식 노드 생성. 조건에 만족하는 데이터 없을 때까지 노드 생성
+
+    5) PRIOR
+    : 바로 앞에 있는 부모 노드의 값 반환
+
+    6) CONNECT_BY_ROOT
+    : 루트 노드의 주어진 컬럼 값 반환
+
+    7) CONNECT_BY_ISLEAF
+    : 가장 하위 노드인 경우 1, 그 외에는 0
+
+    8) ORDER SIBLINGS BY
+    : 형제들끼리 정렬
+
+
+
+
+

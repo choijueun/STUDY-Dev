@@ -1,0 +1,4 @@
+/cmd.txt
+pybo.db
+*.pyc
+__pycache__

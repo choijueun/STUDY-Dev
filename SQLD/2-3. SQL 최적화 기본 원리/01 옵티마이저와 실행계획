@@ -1,0 +1,81 @@
+1. 옵티마이저
+
+    사용자가 질의한 SQL문에 대해 최적의 실행 방법을 결정
+    → 실행계획(Execution Plan)
+
+    SQL은 JAVA, C 등과 달리 사용자의 요구사항만 기술할 뿐 처리과정에 대한 기술 X
+
+    ┏ 규칙기반 옵티마이저(RBO)
+    ┗ 비용기반 옵티마이저(CBO)
+    → 대부분 RDBMS는 CBO 제공
+
+
+    1) 규칙기반 옵티마이저 Rule Based Optimizer
+
+    ┌ 인덱스 유무·종류
+    ├ 연산자 종류
+    └ 참조하는 객체 종류
+
+    - 주요 규칙
+        Single row by rowid
+            : ROWID 통해 하나의 행 액세스.
+            하나의 행 액세스하는 가장 빠른 방법
+        Single row by unique or primary key
+            : 인덱스 액세스 → ROWID를 추출하여 행 액세스
+        Composite index
+            : 복합 인덱스에 동등(=) 연산자 조건으로 검색
+        Single column index
+            : 단일 ㅋ라럼 인덱스에 동등(=) 연산자 조건으로 검색
+        Bounded range search on indexed columns
+            : 인덱스 생성되어 있는 칼럼 양쪽 범위 한정 검색
+        Unbounded range search on indexed columns
+            : 인덱스 생성되어 있는 칼럼 한쪽 범위 한정 검색
+        Full table scan
+            : 전체 테이블 액세스
+
+    - JOIN순서
+        인덱스 존재 유무·종류
+        양쪽 인덱스 존재: 우선 순위↑ = Driving table
+        한쪽 인덱스 존재: 없는 쪽이 선행 테이블
+        양쪽 인덱스 없음: FROM 다음이 선행 테이블
+        우선순위 동일: FROM절 나열된 테이블 역순
+
+
+    2) 비용기반 옵티마이저 Cost Based Optimizer
+
+    ┌ 질의 변환기: SQL문 변환
+    ├ 대안 계획 생성기: 동일한 결과 생성하는 다양한 대안 계획 생성 (대안계획 수 제한 필요)
+    └ 비용 예측기: 생성된 대안 계획의 비용 예측
+
+
+2. 실행계획 Execution Plan
+    SQL에서 요구한 사항을 처리하기 위한 절차와 방법
+    → 옵티마이저는 최적의 실행계획을 생성한다.
+
+    ┌ 조인 순서       Join Order
+    ├ 조인 기법       Join Method
+    ├ 액세스 기법     Access Method
+    ├ 최적화 정보     Optimization Information
+    └ 연산            Operation
+
+    최적화 정보
+    ┌ Cost: 상대적인 비용 정보
+    ├ Card: Cardinality, 결과 집합의 건수
+    └ Bytes: 결과 집합이 차지하는 메모리 양
+
+
+3. SQL 처리 흐름도 Access Flow Diagram
+    실행계획을 시각화한 것
+    → 조인 순서, 액세스 기법, 조인 기법 등을 표현
+
+
+    * Sort Merge Join
+        1) 각 테이블에 대해 동시에 독립적으로 데이터를 먼저 읽어들인다.
+        2) 읽혀진 각 테이블의 데이터를 조인을 위한 연결고리에 대하여 정렬을 수행한다.
+        3) 정렬이 모두 끝난 후에 조인 작업이 수행한다.
+    * NL Join
+        1) 선행 테이블에서 주어진 조건을 만족하는 행을 찾음
+        2) 선행 테이블의 조인 키 값을 가지고 후행 테이블에서 조인 수행
+        3) 선행 테이블의 조건을 만족하는 모든 행에 대해 1번 작업 반복 수행
+    * I/O
+        입력(Input)/출력(Output)의 약자
