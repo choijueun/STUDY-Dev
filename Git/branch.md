@@ -44,7 +44,7 @@ git branch 강제 삭제
 remote branch 삭제   
 <br/>
 
-> git branch -d (branch명)
+> git branch -d (branch명)   
 > git push origin (branch명)
 
 remote branch 삭제   
