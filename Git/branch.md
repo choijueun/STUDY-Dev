@@ -5,6 +5,8 @@ git branch 확인
 - -a
 - -r
 - -v : 마지막 commit msg
+- --merged: merged list
+- --no-merged: no-merged list
 
 > git branch (branch명)
 git branch 생성
