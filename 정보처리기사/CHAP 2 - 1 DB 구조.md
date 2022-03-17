@@ -1,4 +1,4 @@
-# 데이터
+# DATABASE
 
 ### 데이터 전환
 데이터 이행 Data Migration, 데이터 이관
