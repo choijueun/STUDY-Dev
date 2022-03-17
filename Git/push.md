@@ -22,6 +22,10 @@ remote 명시
 git push   
 <br/>
 
+> git push (remote명) (branch명)
+
+branch의 변경 이력을 remote에 push
+
 # Merge
 
 > git merge (branch명)
