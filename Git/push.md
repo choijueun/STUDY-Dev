@@ -22,8 +22,6 @@ remote 명시
 git push   
 <br/>
 
-<br/>
-
 # Merge
 
 > git merge (branch명)
