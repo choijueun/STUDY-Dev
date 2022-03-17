@@ -24,14 +24,14 @@ git push
 
 > git push (remote명) (branch명)
 
-branch의 변경 이력을 remote에 push
-
-# Merge
-
-> git merge (branch명)
-
-명시한 branch를 현재 branch로 merge   
+branch의 변경 이력을 remote에 push   
 <br/>
+
+> git push -u (remote명) (branch명)
+
+remote와 branch를 default로 지정하며 push   
+<br/>
+
 
 
 
