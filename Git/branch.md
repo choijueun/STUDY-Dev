@@ -18,7 +18,7 @@ git branch 생성
    
 > git switch (branch명)   
 
-git branch 변경
+git branch 변경   
 <br/>
    
 > git push --set-upstream (remote명) (branch명)   
@@ -29,7 +29,7 @@ remote 명시
    
 > git branch -d (branch명)   
 
-git branch 삭제
+git branch 삭제   
 <br/>
    
 > git branch -D (branch명)   
