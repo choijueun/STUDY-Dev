@@ -15,6 +15,7 @@ git branch 변경
 
 > git push --set-upstream (remote명) (branch명)
 remote 명시
+- Auto: git config --global push.default current
 
 > git branch -d (branch명)
 git branch 삭제
