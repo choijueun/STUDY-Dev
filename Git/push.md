@@ -32,6 +32,10 @@ branch의 변경 이력을 remote에 push
 remote와 branch를 default로 지정하며 push   
 <br/>
 
+> git config --global push.default current
+
+현재 branch를 push default 값으로 설정
+
 
 
 
