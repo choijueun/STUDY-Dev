@@ -1,0 +1,10 @@
+파일 또는 폴더 이동
+mv (old) (new)
+
+파일 또는 폴더 복사
+cp (origin) (copy)
+> -R: 폴더와 폴더의 컨텐츠 복사 
+
+원격 서버에서 사용자의 파일을 다른 사용자의 파일로 복사
+scp /ImportantPapers.tgz username@remoteserver.com:/Users/username/Desktop/ImportantPapers.tgz
+> -E: 확장된 속성, 리소스 포크 및 ACL 정보를 유지합니다.
