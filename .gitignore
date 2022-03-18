@@ -1,2 +1,5 @@
 /.DS_Store
 *.pyc
+cmd.txt
+pybo.db
+__pycache__
