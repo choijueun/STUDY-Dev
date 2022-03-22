@@ -163,3 +163,13 @@ ex: E-R 모델
 
 - X⊃Y인 두 릴레이션 R(X), S(Y)에서 R의 속성이 S의 속성값을 모두 가진 튜플에서 S가 가진 속성을 제외한 속성만을 구함
 - ÷
+
+### 일반 집합 연산자
+
+> Union
+
+> Intersection
+
+> Difference
+
+> Cartesian product
