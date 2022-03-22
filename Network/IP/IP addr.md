@@ -1,4 +1,4 @@
-참고: ****[IP 주소 의미와 체계 및 서브넷 마스크](https://better-together.tistory.com/118?category=887984)****
+출처: ****[IP 주소 의미와 체계 및 서브넷 마스크](https://better-together.tistory.com/118?category=887984)****
 <br/>
 
 ## IP 주소
@@ -121,8 +121,9 @@ IP 주소를 효율적으로 활용하기 위해 이와 같은 대규모 네트�
 <br/>
 
 ### 서브넷 마스크
-
-IP 주소의 네트워크 부와 호스트 부의 경계를 식별하기 위해 만든 **식별자**.
+- IP 주소의 네트워크 부와 호스트 부의 경계를 식별하기 위해 만든 **식별자**.
+- 1비트 단위로 네트워크 부를 구성할 수 있어 네트워크 세분화
+- 반드시 **연속**된 ‘1’과 **연속**된 ‘0’으로 구성. 0과 1이 교대로 나타나지 않음.
 
 ![Untitled](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdhZD1c%2FbtqNQbm9E11%2Fi3A3mZj3px0rYm1DedeAj0%2Fimg.png)
 
