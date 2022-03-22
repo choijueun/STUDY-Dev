@@ -38,6 +38,8 @@ Dotted-decimal notation
     
     *컴퓨터뿐만이 아니라 IP 주소가 할당되는 라우터를 포함*
 
+![Untitled](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FB82mo%2FbtqNNi76sb9%2FiSw0UPN9LQloCd1lxeNR2k%2Fimg.png)
+
 네트워크나 호스트를 다른 네트워크나 호스트와 구분하는 역할.
 
 서로 다른 네트워크끼리 통신하려면 라우터가 필요하다.
@@ -49,6 +51,8 @@ Dotted-decimal notation
 ### IP 주소 클래스
 
 8비트씩 나눈 그룹을 조합하여 네트워크 부와 호스트 부를 정한다.
+
+![Untitled](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fy8x2n%2FbtqNQwYPRvr%2FDZcDOzjEiCd6hwRfJBkHFK%2Fimg.png)
 
 > 클래스 A
 > 
@@ -95,6 +99,8 @@ Dotted-decimal notation
 ### 서브넷팅과 서브넷
 
 클래스 A와 클래스 B에서 많은 IP 주소가 낭비된다.
+
+![Untitled](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbLDjgW%2FbtqNU2Cuug8%2F02uFH1sdsBsygX5K8oWUT0%2Fimg.png)
 
 > 서브넷팅
 > 
