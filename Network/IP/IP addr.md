@@ -1,3 +1,6 @@
+참고: ****[IP 주소 의미와 체계 및 서브넷 마스크](https://better-together.tistory.com/118?category=887984)****
+<br/>
+
 ## IP 주소
 
 인터넷에 접속한 컴퓨터와 라우터는 고유한 IP 주소를 할당받는다.
