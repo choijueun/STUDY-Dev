@@ -108,3 +108,17 @@ IP 주소를 효율적으로 활용하기 위해 이와 같은 대규모 네트�
 서브넷팅(논리적인 방법)으로 분할된 서브넷은 물리적인 방법(라우터)으로 구별된다.
 
 서로 통신하기 위해서는 라우터 필요
+
+<br/>
+
+### 서브넷 마스크
+
+IP 주소의 네트워크 부와 호스트 부의 경계를 식별하기 위해 만든 **식별자**.
+
+![Untitled](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdhZD1c%2FbtqNQbm9E11%2Fi3A3mZj3px0rYm1DedeAj0%2Fimg.png)
+
+- 서브넷 마스크 비트 1: IP 주소 네트워크 부
+- 서브넷 마스크 비트 0: IP 주소 호스트 부
+
+![Untitled](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbh762H%2FbtqNRI5EK9R%2FKCrxAYpRDFkLphQmZtCRHK%2Fimg.png)
+
