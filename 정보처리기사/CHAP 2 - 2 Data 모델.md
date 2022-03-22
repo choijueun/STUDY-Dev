@@ -168,8 +168,16 @@ ex: E-R 모델
 
 > Union
 
+- 합집합 후 중복 제거
+
 > Intersection
+
+- 교집합
 
 > Difference
 
+- 차집합
+
 > Cartesian product
+
+- 순서쌍
