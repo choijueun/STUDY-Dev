@@ -54,3 +54,24 @@
 
 - 웹 서비스
     - 파이어 폭스, 크롬, 인터넷 익스플로러/엣지, 사파리 등
+
+### 웹 서비스
+
+일부 온라인 게임을 제외한 대부분의 인터넷 서비스가 웹 서비스로 이전되거나 통합
+
+    ex. 메일 전용 클라이언트의 도움 없이 웹 브라우저에서 Gmail 이용
+
+> 이유
+
+1. 웹 애플리케이션 서버 WAS, Web Application Server 개발
+
+    - 웹 앱: 사용자와 상호작용하여 개인화된 서비스 이용
+
+1. 웹 브라우저의 발전과 사용자 경험 UX, User Experience 향상
+
+1. 플랫폼으로서의 웹
+
+    - 다양한 운영체제를 고려하지 않아도 됨
+
+![Untitled](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FFD5eY%2FbtqMtybmzew%2FC4d2tkoKnKPFT8lCcG9Zt0%2Fimg.png)
+
