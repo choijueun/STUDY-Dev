@@ -1,7 +1,22 @@
 screen
-
 물리적인 터미널을 여러 개의 가상 터미널로 다중화해주는 도구
 
+screen -ls
 screen -list
+세션 목록 표시
+
+screen -r (name)
+세션 연결
 
 screen -dr (name)
+
+
+screen -S (name)
+생성할 세션 이름 지정
+
+screen -L
+화면에 로그 출력되도록 함
+→ screenlog.n file에 저장
+
+Ctrl+a -> d
+세션 끊기
