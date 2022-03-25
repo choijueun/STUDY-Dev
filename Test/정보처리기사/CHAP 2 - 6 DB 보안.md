@@ -87,3 +87,44 @@ DB마다 새로운 트랜잭션이 수행되는 것으로 간주
 - 개인키 암호 방식
 - 공개키 암호 방식
 
+### 접근통제
+
+데이터가 저장된 **객체**와 이를 사용하려는 **주체** 사이의 정보 흐름 제한
+
+> 3요소
+
+- 접근통제 정책
+- 접근통제 매커니즘
+- 접근통제 보안모델
+
+> 기술
+
+- 임의 접근통제 DAC, Discretionary Access Control
+- 강제 접근통제 MAC, Mandatory Access Control
+- 역할기반 접근통제 RBAC, Role Based Access Control
+
+### 접근통제 정책
+
+Who, When, Where, What, How
+
+> 신분 기반 정책
+
+주체나 그룹의 신분에 근거
+
+- IBP(individual-Based Policy)
+    - 최소 권한 정책, 단일 주체에 하나의 객체
+- GBP(Croup-Based Policy)
+    - 복수 주체에 하나의 객체
+
+> 규칙 기반 정책
+
+주체가 갖는 권한에 근거
+
+- MLP(Multi-Level Policy)
+    - 사용자나 객체별로 지정된 기밀 분류에 따름
+- CBP(Compartment-Based Policy)
+    - 집단별로 지정된 기밀 허가에 따름
+
+> 역할 기반 정책
+
+GBP의 변형된 정책. 주체의 신분이 아니라 주체가 맡은 **역할**에 근거
