@@ -1,0 +1,7 @@
+screen
+
+물리적인 터미널을 여러 개의 가상 터미널로 다중화해주는 도구
+
+screen -list
+
+screen -dr (name)
