@@ -85,5 +85,20 @@ TCP, UDP, IP, HTTP …
 
 - 사실상 표준(De Facto Standard)
 
+### TCP/IP가 사실상 표준이 된 이유
 
 ![Untitled](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcnMZww%2FbtqJXU99OPe%2Foym0HqaPNQHAW94LgDOShK%2Fimg.png)
+
+프로토콜을 정하는 것 자체보다 **실제 네트워크에서 동작하는 프로토콜을 구현하는 것을 중시**한 모델
+
+### 데이터 송수신 과정
+
+![Untitled](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fxo5CB%2FbtqMfis8QVh%2FI8y20795Hx96oYqCOKKSjK%2Fimg.png)
+
+> 데이터 송신 컴퓨터
+
+제4계층부터 순서대로 각 계층의 역할 수행
+
+> 데이터 수신 컴퓨터
+
+제1계층부터 순서대로 각 계층의 역할 수행
