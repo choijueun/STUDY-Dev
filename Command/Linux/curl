@@ -4,4 +4,4 @@ client URL
 
 -H: header
 
--v: verbose 출력해서 실행 확인하는것
+-v: verbose 요청과 응답 출력
