@@ -1,7 +1,29 @@
 client URL
 
--X: method(POST, GET, PUT, DELETE: CRUD)
+-X      --request
+: method(POST, GET, PUT, DELETE: CRUD) 기술
 
--H: header
+-H
+: header
 
--v: verbose 요청과 응답 출력
+-T      --upload-file
+: 파일 전송 (PUT Request)
+
+-u userid:password
+: Basic Auth 
+
+-v      --verbose
+: 요청과 응답 출력
+
+-L      --location
+: HTTP 301이나 HTTP 302 응답이 왔을 때 redirection URL로 따라간다.
+
+-i      --inclue
+: 응답에 Content뿐만 아니라 서버의 Response도 출력 (디버깅에 유용)
+
+-d      --data
+: HTTP Post Data. FORM을 POST하는 HTTP나 JSON으로 데이터 주고받는 REST기반 웹서비스 디버깅에 유용
+
+
+---
+[curl 설치 및 사용법](https://www.lesstif.com/software-architect/curl-http-get-post-rest-api-14745703.html)
