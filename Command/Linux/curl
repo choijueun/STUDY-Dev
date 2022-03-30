@@ -15,6 +15,9 @@ client URL
 -v      --verbose
 : 요청과 응답 출력
 
+-k      --insecure
+: 인증서 검증을 끄고 TLS 
+
 -L      --location
 : HTTP 301이나 HTTP 302 응답이 왔을 때 redirection URL로 따라간다.
 
