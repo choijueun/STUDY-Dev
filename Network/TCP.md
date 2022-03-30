@@ -57,3 +57,9 @@ TCP, UDP, IP, HTTP …
 프로토콜들의 집합
 
 - 각 계층은 프로토콜에 정의된 기능을 수행하면서 제 역할을 한다.
+
+현실에서는 이 설계도에 따라 제작된 커퓨터와 네트워크 장비의 하드웨어 or 소프트웨어가 각 계층의 기능을 구현(implement)
+
+![Untitled](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FMWf4b%2FbtqMcuU7tqE%2Fh9aq0anMBbLcH4tetWl8Q1%2Fimg.png)
+
+
