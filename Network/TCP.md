@@ -67,3 +67,23 @@ TCP, UDP, IP, HTTP …
 - 독립성
 
 - 인터페이스를 통한 네트워크 장비 기술 간의 상호 연결성
+
+
+## OSI 모델과 TCP/IP 모델
+
+> OSI : Open System Interconnection
+
+- 데이터 전송 과정을 7개 계층으로 분류
+
+- 네트워크 통신과정을 개념적으로 설명하는 용도로 활용
+
+- 다른 모델에 영향을 주어 OSI 참조 모델이라고도 불림
+
+> TCP/IP 모델
+
+- 데이터 전송 과정을 4개 계층으로 단순화
+
+- 사실상 표준(De Facto Standard)
+
+
+![Untitled](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcnMZww%2FbtqJXU99OPe%2Foym0HqaPNQHAW94LgDOShK%2Fimg.png)
