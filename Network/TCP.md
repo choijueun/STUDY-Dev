@@ -62,4 +62,8 @@ TCP, UDP, IP, HTTP …
 
 ![Untitled](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FMWf4b%2FbtqMcuU7tqE%2Fh9aq0anMBbLcH4tetWl8Q1%2Fimg.png)
 
+### 장점
 
+- 독립성
+
+- 인터페이스를 통한 네트워크 장비 기술 간의 상호 연결성
