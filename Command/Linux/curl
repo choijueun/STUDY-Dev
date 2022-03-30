@@ -1,0 +1,7 @@
+client URL
+
+-X: method(POST, GET, PUT, DELETE: CRUD)
+
+-H: header
+
+-v: verbose 출력해서 실행 확인하는것
