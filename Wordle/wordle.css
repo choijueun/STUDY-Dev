@@ -12,6 +12,7 @@
     cursor: default;
 }
 header {
+    width: fit-content;
     border-bottom: 2px solid #dedede;
     margin: 10px auto; 
     font-size: 35px; 
