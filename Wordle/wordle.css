@@ -1,11 +1,13 @@
 /* COMMON */
-.item-center { margin-left: auto; margin-right: auto; }
-.text-center { text-align: center; }
-.round { border-radius: .3em; }
+.item-center    { margin-left: auto; margin-right: auto; }
+.text-center    { text-align: center; }
+.round          { border-radius: .3em; }
+.inline-block   { display: inline-block;}
+.disabled       { display: none; }
 
 
 /* TAGS */
-#Wordle {
+#WORDLE {
     width: fit-content;
     cursor: default;
 }
@@ -19,7 +21,7 @@ nav {
 }
 
 /* PUZZLE */
-#puzzle {
+#PUZZLE {
     width: fit-content;
 }
 .row { 
@@ -47,8 +49,6 @@ nav {
 /* VIRTUAL BUTTONS */
 .vr-word        { width: 20px;  }
 .vr-btn         { width: 50px; }
-.vr-shifton     { display: inline-block; }
-.vr-shiftoff    { display: none; }
 
 /* ANSWER */
 .sucs           { color: yellowgreen }

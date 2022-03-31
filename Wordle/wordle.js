@@ -1,26 +1,25 @@
 $(function(){
-    // 한글 정규식 검사
+    // REGULAR EXPRESSION
     function kRe(str) {
+        // 한글 정규식
         const re = /[ㄱ-ㅎㅏ-ㅣ가-힣]/g; 
-        if (re.test(str)) {
-            return true;
-        }else {
-            return false;
-        }
+        // 검사
+        if (re.test(str)) { return true; }
+        else { return false; }
     }
 
     // SHIFT
     function toggleShift(){
-        
+        // SHIFT 영역
+        let vr_shift = $('.vr-shift')
+        // SHIFT 토글
+        vr_shift.toggleClass('disabled').toggleClass('inline-block')
     }
-    $(document).on('click', '#shiftBtn', function(){} );
+    $(document).on( 'click', '#SHIFT'
+                    ,function(){ toggleShift(); } );
 
-    var answer = 'abcde';
-    var user_inputs = $('input')
-    $('.button').click(function(){
-        console.log(user_inputs[0].value)
-        console.log(kRe(user_inputs[0].value))
+    // SUBMIT
+    $(document).on( 'click', '#SUBMIT', function(){
+        console.log('click #SUBMIT')
     });
-
-    
 });

@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="./wordle.css">
 </head>
 <body>
-    <div id="Wordle" class="wrapper item-center">
+    <div id="WORDLE" class="wrapper item-center">
         <header class="text-center">
             <span class="sucs">W</span>ORDLE<span class="warn">W</span>ORDLE
         </header>
         <nav class="text-center">
             how to play
         </nav>
-        <section id="puzzle" class="item-center">
+        <section id="PUZZLE" class="item-center">
             <div class="row">
                 <div class="block-word text-center round"></div>
                 <div class="block-word text-center round"></div>
@@ -36,16 +36,16 @@
         </section>
     
         <!-- Virtual Keyboard -->
-        <section id="vr-keyboard" class="item-center">
+        <section id="VR-KEYBOARD" class="item-center">
             <div class="row item-center">
-                <div class="vr-shifton">
+                <div class="vr-shift inline-block">
                     <div class="vr-key vr-word text-center round">ㅂ</div>
                     <div class="vr-key vr-word text-center round">ㅈ</div>
                     <div class="vr-key vr-word text-center round">ㄷ</div>
                     <div class="vr-key vr-word text-center round">ㄱ</div>
                     <div class="vr-key vr-word text-center round">ㅅ</div>
                 </div>
-                <div class="vr-shiftoff">
+                <div class="vr-shift disabled">
                     <div class="vr-key vr-word text-center round">ㅃ</div>
                     <div class="vr-key vr-word text-center round">ㅉ</div>
                     <div class="vr-key vr-word text-center round">ㄸ</div>
@@ -55,8 +55,14 @@
                 <div class="vr-key vr-word text-center round">ㅛ</div>
                 <div class="vr-key vr-word text-center round">ㅕ</div>
                 <div class="vr-key vr-word text-center round">ㅑ</div>
-                <div class="vr-key vr-word text-center round">ㅐ</div>
-                <div class="vr-key vr-word text-center round">ㅔ</div>
+                <div class="vr-shift inline-block">
+                    <div class="vr-key vr-word text-center round">ㅐ</div>
+                    <div class="vr-key vr-word text-center round">ㅔ</div>
+                </div>
+                <div class="vr-shift disabled">
+                    <div class="vr-key vr-word text-center round">ㅒ</div>
+                    <div class="vr-key vr-word text-center round">ㅖ</div>
+                </div>
             </div>
             <div class="row item-center">
                 <div class="vr-key vr-word text-center round">ㅁ</div>
@@ -69,11 +75,11 @@
                 <div class="vr-key vr-word text-center round">ㅏ</div>
                 <div class="vr-key vr-word text-center round">ㅣ</div>
                 <!-- Delete -->
-                <div id="vr-remove" class="vr-key vr-btn text-center round">삭제</div>
+                <div id="REMOVE" class="vr-key vr-btn text-center round">삭제</div>
             </div>
             <div class="row item-center">
                 <!-- Shift -->
-                <div id="vr-shift" class="vr-key vr-btn text-center round">⇧</div>
+                <div id="SHIFT" class="vr-key vr-btn text-center round">⇧</div>
                 <div class="vr-key vr-word text-center round">ㅋ</div>
                 <div class="vr-key vr-word text-center round">ㅌ</div>
                 <div class="vr-key vr-word text-center round">ㅊ</div>
@@ -82,7 +88,7 @@
                 <div class="vr-key vr-word text-center round">ㅜ</div>
                 <div class="vr-key vr-word text-center round">ㅡ</div>
                 <!-- Enter -->
-                <div id="vr-submit" class="vr-key vr-btn text-center round">입력</div>
+                <div id="SUBMIT" class="vr-key vr-btn text-center round">입력</div>
             </div>
         </section>
     </div>
