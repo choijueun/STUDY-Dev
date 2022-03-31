@@ -9,6 +9,12 @@ $(function(){
         }
     }
 
+    // SHIFT
+    function toggleShift(){
+        
+    }
+    $(document).on('click', '#shiftBtn', function(){} );
+
     var answer = 'abcde';
     var user_inputs = $('input')
     $('.button').click(function(){

@@ -7,6 +7,7 @@
 /* TAGS */
 #Wordle {
     width: fit-content;
+    cursor: default;
 }
 header {
     border-bottom: 2px solid #dedede;
@@ -23,12 +24,6 @@ nav {
 }
 .row { 
     width: fit-content; height: fit-content;
-}
-.vr-shifton {
-    display: inline-block;
-}
-.vr-shiftoff {
-    display: none;
 }
 .block-word {
     display: inline-block;
@@ -49,12 +44,11 @@ nav {
 .vr-key:hover {
     background-color: #ccc;
 }
-.vr-word {
-    width: 20px; 
-}
-.vr-btn {
-    width: 50px;
-}
+/* VIRTUAL BUTTONS */
+.vr-word        { width: 20px;  }
+.vr-btn         { width: 50px; }
+.vr-shifton     { display: inline-block; }
+.vr-shiftoff    { display: none; }
 
 /* ANSWER */
 .sucs           { color: yellowgreen }
