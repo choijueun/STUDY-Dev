@@ -15,8 +15,12 @@ $(function(){
         // SHIFT 토글
         vr_shift.toggleClass('disabled').toggleClass('inline-block')
     }
-    $(document).on( 'click', '#SHIFT'
-                    ,function(){ toggleShift(); } );
+    $(document).on( 'click', '#SHIFT', function(){ toggleShift(); } );
+
+    // DELETE
+    $(document).on( 'click', '#DELETE', function(){
+        console.log('click #DELETE')
+    });
 
     // SUBMIT
     $(document).on( 'click', '#SUBMIT', function(){
