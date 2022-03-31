@@ -1,13 +1,20 @@
-/* BODY */
+/* COMMON */
+.item-center { margin-left: auto; margin-right: auto; }
+.text-center { text-align: center; }
+.round { border-radius: .3em; }
+
+
+/* TAGS */
 #Wordle {
     width: fit-content;
 }
-
-/* HEADER */
 header {
     margin: 10px auto; 
     border-bottom: 2px solid #dedede;
     font-size: 35px; 
+}
+nav {
+    margin-bottom: 1em;
 }
 
 /* PUZZLE */
@@ -16,30 +23,33 @@ header {
     height: fit-content; margin-top: 5px;
 }
 
-.words {
+.block-word {
     display: inline-block;
     width: 50px; height: 50px; margin: 2px;
     border: 2px solid #666; border-radius: 10px;
     font-size: 30px; 
 }
 
+/* VIRTUAL KEYBOARD */
+
+
 /* ANSWER */
 .sucs           { color: yellowgreen }
 .warn           { color: gold }
-.success        { color: white; background-color: yellowgreen;  border: 2px solid yellowgreen; }
-.warning        { color: white; background-color: gold;         border: 2px solid gold; }
-.non-correct    { color: white; background-color: #ddd;         border: 2px solid #ddd; }
+.success        { color: white;     background-color: yellowgreen;      border: 2px solid yellowgreen; }
+.warning        { color: white;     background-color: gold;             border: 2px solid gold; }
+.non-correct    { color: white;     background-color: #ccc;             border: 2px solid #ccc; }
 
-/* INPUT */
-.button {
-    width: 40px; height: 20px; padding: .3em; 
+/* BUTTON */
+.btn {
     background-color: #dedede; border-radius: .3em;
     font-size: 16px; margin: 5px; padding-top: .5em;
+    cursor: pointer;
+}
+.btn-word {
+    width:20px; height: 30px; padding: .8em .5em 0;
+}
+.btn-enter {
+    width: 40px; height: 30px; padding: .8em .5em 0;
 }
 
-
-/* ITEM */
-.item-center { margin-left: auto; margin-right: auto; }
-
-/* TEXT */
-.text-center { text-align: center; }
