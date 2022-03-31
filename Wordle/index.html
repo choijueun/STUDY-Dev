@@ -8,11 +8,11 @@
     
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    
+
     <!-- StyleSheet -->
     <link rel="stylesheet" href="./wordle.css">
 </head>
-<body>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onkeydown="return false">
     <div id="WORDLE" class="wrapper item-center">
         <header class="text-center">
             <span class="sucs">W</span>ORDLE<span class="warn">W</span>ORDLE
@@ -75,7 +75,7 @@
                     <div id="ㅏ" class="vr-key vr-word text-center round">ㅏ</div>
                     <div id="ㅣ" class="vr-key vr-word text-center round">ㅣ</div>
                     <!-- Delete -->
-                    <div id="REMOVE" class="vr-key vr-btn text-center round">삭제</div>
+                    <div id="DELETE" class="vr-key vr-btn text-center round">삭제</div>
             </div>
             <div class="row item-center">
                     <!-- Shift -->

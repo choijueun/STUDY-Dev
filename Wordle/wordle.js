@@ -1,4 +1,7 @@
 $(function(){
+    // DRAG UNABLE
+    document.oncontextmenu = function(){ return false; }
+
     // REGULAR EXPRESSION
     function kRe(str) {
         // 한글 정규식
