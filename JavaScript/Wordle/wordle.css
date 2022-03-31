@@ -1,13 +1,37 @@
-.row { margin-top: 10px; }
-
-.words {
-    width: 50px;
-    height: 50px;
-    font-size: 35px;
-    text-align: center;
+/* BODY */
+#Wordle {
+    width: fit-content; margin: 0 auto 0;
 }
 
+/* HEADER */
+header {
+    font-size: 30px; text-align: center;
+}
+
+/* PUZZLE */
+.row { 
+    height: fit-content;
+    position: relative;
+}
+
+.words {
+    display: inline-block;
+    width: 60px; height: 60px; margin: 2px;
+    border: 2px solid black; border-radius: 10px;
+    font-size: 35px; text-align: center;
+}
+
+/* ANSWER */
+.sucs {
+    color: yellowgreen
+}
+.warn {
+    color: gold
+}
+
+/* INPUT */
 button {
     width: 40px;
     height: 20px;
+
 }
