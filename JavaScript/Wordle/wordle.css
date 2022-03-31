@@ -5,7 +5,9 @@
 
 /* HEADER */
 header {
-    font-size: 30px; text-align: center;
+    margin: 10px; 
+    border-bottom: 2px solid #dedede;
+    font-size: 35px; text-align: center;
 }
 
 /* PUZZLE */
@@ -22,16 +24,14 @@ header {
 }
 
 /* ANSWER */
-.sucs {
-    color: yellowgreen
-}
-.warn {
-    color: gold
-}
+.sucs    { color: yellowgreen }
+.warn    { color: gold }
+.success { color: white; background-color: yellowgreen; }
+.warning { color: white; background-color: gold; }
 
 /* INPUT */
-button {
-    width: 40px;
-    height: 20px;
-
+.button {
+    width: 40px; height: 20px; padding: .3em; 
+    background-color: #dedede; border-radius: .3em;
+    font-size: 20px; text-align: center;
 }
