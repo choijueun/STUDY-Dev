@@ -12,29 +12,31 @@
     <!-- StyleSheet -->
     <link rel="stylesheet" href="./wordle.css">
 </head>
-<body id="Wordle">
-    <header>
-        <span class="sucs">W</span>ORDLE<span class="warn">W</span>ORDLE
-    </header>
-    <div class="puzzle">
-        <div class="row">
-            <input class="words"></input>
-            <input class="words"></input>
-            <input class="words"></input>
-            <input class="words"></input>
+<body>
+    <div id="Wordle" class="wrapper item-center">
+        <header class="text-center">
+            <span class="sucs">W</span>ORDLE<span class="warn">W</span>ORDLE
+        </header>
+        <div class="puzzle">
+            <div class="row item-center">
+                <input class="words text-center"></input>
+                <input class="words text-center"></input>
+                <input class="words text-center"></input>
+                <input class="words text-center"></input>
+            </div>
+            <div class="row item-center">
+                <input class="words text-center"></input>
+                <input class="words text-center"></input>
+                <input class="words text-center"></input>
+                <input class="words text-center"></input>
+            </div>
         </div>
-        <div class="row">
-            <input class="words"></input>
-            <input class="words"></input>
-            <input class="words"></input>
-            <input class="words"></input>
-        </div>
+    
+        <!-- Virtual Keyboard -->
+    
+        <!-- Enter -->
+        <div class="button text-center">확인</div>
     </div>
-
-    <!-- Virtual Keyboard -->
-
-    <!-- Enter -->
-    <div class="button">확인</div>
 
     <!-- JavaScript -->
     <script src="./wordle.js"></script>
