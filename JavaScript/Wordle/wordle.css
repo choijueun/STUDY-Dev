@@ -9,8 +9,8 @@
     width: fit-content;
 }
 header {
-    margin: 10px auto; 
     border-bottom: 2px solid #dedede;
+    margin: 10px auto; 
     font-size: 35px; 
 }
 nav {
@@ -18,20 +18,43 @@ nav {
 }
 
 /* PUZZLE */
-.row { 
-    position: relative;
-    height: fit-content; margin-top: 5px;
+#puzzle {
+    width: fit-content;
 }
-
+.row { 
+    width: fit-content; height: fit-content;
+}
+.vr-shifton {
+    display: inline-block;
+}
+.vr-shiftoff {
+    display: none;
+}
 .block-word {
     display: inline-block;
-    width: 50px; height: 50px; margin: 2px;
-    border: 2px solid #666; border-radius: 10px;
+    width: 50px; height: 50px; 
+    margin: 5px 2px;
+    border: 2px solid #666;
     font-size: 30px; 
 }
 
 /* VIRTUAL KEYBOARD */
-
+.vr-key {
+    display: inline-block;
+    background-color: #e5e5e5;
+    height: 30px; font-size: 16px; 
+    margin: .3em 0em; padding: .8em .5em 0;
+    cursor: pointer;
+}
+.vr-key:hover {
+    background-color: #ccc;
+}
+.vr-word {
+    width: 20px; 
+}
+.vr-btn {
+    width: 50px;
+}
 
 /* ANSWER */
 .sucs           { color: yellowgreen }
@@ -40,16 +63,4 @@ nav {
 .warning        { color: white;     background-color: gold;             border: 2px solid gold; }
 .non-correct    { color: white;     background-color: #ccc;             border: 2px solid #ccc; }
 
-/* BUTTON */
-.btn {
-    background-color: #dedede; border-radius: .3em;
-    font-size: 16px; margin: 5px; padding-top: .5em;
-    cursor: pointer;
-}
-.btn-word {
-    width:20px; height: 30px; padding: .8em .5em 0;
-}
-.btn-enter {
-    width: 40px; height: 30px; padding: .8em .5em 0;
-}
 
