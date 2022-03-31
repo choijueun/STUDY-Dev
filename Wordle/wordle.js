@@ -1,6 +1,7 @@
 $(function(){
     // DRAG UNABLE
-    document.oncontextmenu = function(){ return false; }
+    // document.oncontextmenu = function(){ return false; }
+    $(document).on('contextmenu dragstart selectstart keydown', function(e){ return false; })
 
     // REGULAR EXPRESSION
     function kRe(str) {
