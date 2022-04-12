@@ -2,6 +2,8 @@
 
 type hint를 언어 차원에서 지원
 
+**3.9를 기점으로 메서드가 달라짐**
+
 ## List, Dict, Tuple, Set
 
 > List[int] = [1,2,3]
