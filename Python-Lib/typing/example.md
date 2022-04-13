@@ -18,17 +18,15 @@
     from typing import List
     numList: List[int] = [1,2,3,4,5]
 
-    <br/>
+<br/>
 
     from typing import Set
     numSet: Set[int] = {1,2,3,4,5}
 
-    <br/>
+<br/>
 
     from typing import Dict
     numDict: Dict[int, str] = {1:'a', 2:'b', 3:'c', 4:'d', 5:'e'}
-
-    <br/>
 
 <br/>
 
