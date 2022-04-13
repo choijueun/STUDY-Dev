@@ -1,16 +1,19 @@
 ### var
 
+```
 age: int = 20
-
 name: str = '최주은'
+```
 
 <br/>
 
 ### function
 
+```
 def temp(num: int) -> bool:
     if num == 1:
         return true
+```
 
 <br/>
 
@@ -18,15 +21,15 @@ def temp(num: int) -> bool:
 
     from typing import List
 
-numList: List[int] = [1,2,3,4,5]
+```numList: List[int] = [1,2,3,4,5]```
 
     from typing import Set
 
-numSet: Set[int] = {1,2,3,4,5}
+```numSet: Set[int] = {1,2,3,4,5}```
 
     from typing import Dict
 
-numDict: Dict[int, str] = {1:'a', 2:'b', 3:'c', 4:'d', 5:'e'}
+```numDict: Dict[int, str] = {1:'a', 2:'b', 3:'c', 4:'d', 5:'e'}```
 
 <br/>
 
