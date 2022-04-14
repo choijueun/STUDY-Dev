@@ -11,8 +11,3 @@ eXtensible Markup Language
 
 <br/>
 
-### SOAP(Simple Object Access Protocol)
-
-네트워크 상에서 HTTP/HTTPS, SMTP 등을 이용해 XML을 교환하기 위한 통신 규약
-
-최근에는 SOAP 대신 **RESTful 프로토콜**을 이용하기도
