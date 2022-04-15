@@ -2,7 +2,7 @@
 
 모듈화를 통해 분리된 시스템의 각 기능
 
-## 결합도 Coupling
+### 결합도 Coupling
 
 모듈 간에 상호 의존하는 정도
 
@@ -24,7 +24,7 @@
 
 <br/>
 
-## 응집도 Cohension
+### 응집도 Cohension
 
 모듈의 내부 요소들이 서로 관련되어 있는 정도
 
@@ -48,11 +48,11 @@
 
 <br/>
 
-## Fan-In / Fan-Out
+### Fan-In / Fan-Out
 
 <br/>
 
-## N-S CHart
+### N-S CHart
 
 논리의 기술에 중점을 두고 도형을 이용해 표현
 
